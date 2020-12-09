@@ -1,0 +1,440 @@
+#hello world
+print("hello_world")
+
+
+#inputting
+print("shaam","vibhaa",sep="00")
+
+
+#addition of two numbers
+first_number = 20
+second_number = 33
+result = first_number+second_number
+print(result)
+
+
+#keyword verification
+
+import keyword
+keyword.iskeyword("shaam")
+
+
+#output 
+
+k = "shaam"
+i = 2
+print(k,i)
+
+
+#checking type
+
+k = 3.5
+j = 2.2
+name = "vibhaa"
+c = 2+7j
+print(type(k))
+print(type(j))
+print(type(name))
+print(type(c))
+
+
+#output variable
+
+k = "shaam"
+j = 2
+print(k+str(j))
+
+
+#input functions
+
+name = input("enter a name")
+print(name)
+
+
+#addition of 2 numbers
+first_number = int(input("enter a nuber"))
+second_number = int(input("enter a nuber"))
+result = first_number+second_number
+print("The answer is",result)
+
+
+# division
+
+k = 5
+j = 3
+print(k/j)
+
+
+#boolean
+
+k = 3
+j = 6
+print(k>j)
+
+
+#if statement
+
+i = 3
+j = 6
+if i<j:
+    print("j is bigger")
+    
+    
+#if else statement
+
+k = 9
+l = 5
+if k>l:
+    print("k is bigger")
+else:
+        print("l is bigger")
+        
+        
+        
+#nested if problem If user enters 1 display one , if the input is 2 display two ,if the input is 3 display three and for any other input display invalid input
+
+
+input_number = int(input("enter number"))
+if input_number==1:
+    print("one")
+else:
+    if input_number==2:
+        print("two")
+    else:
+        if input_number==3:
+            print("three")
+        else:
+            print("Invalid Input")
+            
+            
+            
+#same problem using elif
+
+input_number = int(input("enter number"))
+if input_number==1:
+    print("one")
+elif input_number==2:
+    print("two")
+elif input_number==3:
+    print("three")
+else:
+    print("Invalid Input")
+    
+    
+#binary to decimal
+
+binary = input("enter a number")
+decimal = 0
+for digit in binary:
+    decimal=decimal*2+int(digit)
+    print(decimal)
+    
+    
+    
+#solving generalised problems
+    
+    
+#problem 1
+    
+#Read radius and compute area of a circle 
+
+#area of circle of pie*r^2
+pie = 3.1444
+r = int(input("enter a value"))
+area = pie*r*r
+print("the_area_of_the circle_is",area)
+
+
+
+#problem 2
+
+#Compute tax on income for a person . Tax is 10% of the income
+
+income = int(input("enter a value"))
+percentage_of_tax = 10
+tax_on_income = income/percentage_of_tax
+print("the tax you should pay is",tax_on_income)
+
+
+#problem 3
+
+#Check if a given number is odd or even
+
+number = int(input("enter a number"))
+if (number%2==0) :
+    print("even number")
+else:
+    print("odd number")
+
+#problem 4
+
+#Check if a given year is a leap year 
+
+year = int(input("enter a value"))
+if (year%4==0):
+    print("leap year")
+else:
+    print("not a leap year")
+
+
+#problem 5
+
+#Read two numbers and print the greatest of two numbers 
+
+first_number = int(input("enter a value"))
+second_number = int(input("enter a number"))
+if (first_number>second_number):
+    print("number1 is biggest")
+else:
+     print("number2 is biggest")
+  
+
+#Read input mark from the user .If the mark range is between 40 and 100 print you have passed .Range between 0 and 39 print the user has failed. For any other mark input print the input is invalid.
+
+mark = int(input("enter a value"))
+if  0<=mark>=39:
+    print("fail")
+else:
+    print("pass")
+
+
+#problem 6
+
+
+#Find the average runs scored by a batsman in 4 matches
+
+first_match = int(input("enter the runs"))
+second_match = int(input("enter the runs"))
+third_match = int(input("enter the runs"))
+fourth_match = int(input("enter the runs"))
+avg = (first_match + second_match + third_match + fourth_match)/4
+print("the total avg is",avg)
+
+#problem 7 
+
+
+#An university is setting up a new lab at their premises. Design an algorithm and write Python code to determine the approximate cost to be spent for setting up the lab. Cost for setting the lab is sum of cost of computers, cost of furnitures and labour cost. Use the following formulae for solving the problem
+
+cost_of_1_computer = int(input("enter the cost"))
+number_of_computers = int(input("enter the number"))
+number_of_tables = int(input("enter the number"))
+cost_of_1_table = int(input("enter the cost"))
+number_of_chairs = int(input("enter the number"))
+cost_of_1_chair = int(input("enter the cost"))
+number_of_hours_worked =  int(input("enter the number_of_hours"))
+wages_per_hour = int(input("enter the wages"))
+
+
+computer_cost = (cost_of_1_computer * number_of_computers)
+furniture_cost = (cost_of_1_chair * number_of_chairs + cost_of_1_table * number_of_tables)
+labour_cost = (number_of_hours_worked * wages_per_hour)
+
+total = (computer_cost + furniture_cost + labour_cost)
+print("the overall cost is",total)
+
+
+#problem 8 
+
+#Given the number of hours and minutes browsed, write a program to calculate bill for Internet Browsing in a browsing center. The conditions are given below.
+#(a) 1 Hour Rs.50
+#(b) 1 minute Re. 1
+#(c) Rs. 200 for five hours
+
+print("enter number of hours")
+hour=int(input())
+print("enter number of minutes")
+min=int(input())
+if (hour>7):
+    print("invalid time")
+elif(hour>=5):
+    amount=200
+    amount=hour*(50-5)+min*1
+    print(amount)
+elif(hour<5):
+ amount=(hour*50)+min*1
+ print(amount)
+            
+        
+#problem 9
+
+#Government of India has decided to give scholarship for students who are first graduates in family and have scored average > 98 in math, physics and chemistry. Design an algorithm and write a Python program to check if a student is eligible for scholarship
+
+physics_mark = float(input("physics_mark"))
+math_mark = float(input("math_mark"))
+chemistry_mark = float(input("chemisty_mark"))
+
+
+avg = (physics_mark + math_mark + chemistry_mark)/3
+
+if (avg >= 98.0):
+    print("eligible")
+else:
+    print("not eligible")
+
+
+
+#problem 10
+
+
+# Algorithm for Largest of Three numbers
+
+a=int(input("enter the value for a"))
+b=int(input("enter the value for b"))
+c=int(input("enter the value for c"))
+if (a>b):
+    if (a>c):
+        print(a)
+else:
+    if (b>a):
+        if (b>c):
+            print(b)
+        else:
+            print(c)
+
+
+#problem 11
+
+#Write a python program to segregate student based on their CGPA. The details are as follows:  
+		              #   <=9 CGPA <=10    -  outstanding
+#<=8 CGPA <9    -  excellent
+#<=7 CGPA <8    -  good
+#<=6 CGPA <7    -  average
+#<=5 CGPA <6    -  better
+#CGPA<5             -  poor
+
+cgpa = int(input("enter_cgpa_obtained"))
+
+if (9<=cgpa>=10):
+    print("excellent")
+elif (7<=cgpa>=8):
+    print("good")
+elif (6<=cgpa>=7):
+    print("average")
+elif (cgpa < 5):
+    print("poor")
+                 
+
+
+#loops
+    
+#Print values from 0 to 9 in a line
+a = 0
+b = 10 
+while a<b:
+    print(a,end='')
+    a +=1
+
+count = 0
+while count<9:
+    print(count)
+    count = count+1
+
+#break
+
+i = 1
+while i < 6:
+    print(i)
+    if i == 3:
+        break
+    i = i+1
+
+# problem 12
+
+#Print all even numbers less than 10 and greater than or equal to 0
+    
+x = 10
+while x:
+    x = x-1
+    if x %2 != 0: continue
+print(x,end='')
+        
+
+#problem 13
+
+#prime or composite
+number = int(input("enter a number"))
+
+if number == 0:
+    print("o is neither prime nor composite")
+elif number < 0 :
+    print("give only positive number")
+else:
+    x = number // 2
+    while x > 1:
+        if number % x == 0:
+            break
+        x-=1
+    else:
+        print(number,"is prime")
+
+#problem 14
+
+# Class Average
+
+count = 0
+total = 0
+
+
+x = int(input("enter the how many marks you wanna read: "))
+
+while count < x:
+    marks = input("enter the marks")
+    if (marks == 0):
+        print("terminates")
+        break
+    total = total + marks
+    count = count+1
+else:
+    class_avg = marks/x
+    print("the average is",class_avg)
+    
+#for loops
+
+for i in range(2,10,2):
+    print(i)
+
+for letter in 'python':
+    print('current letter',letter)
+
+
+    
+    
+    
+
+#lists
+
+list1 = ['physics','math','science']
+print(list1[1])
+
+#updating list
+
+list = ['physics','trevor','arthur']
+list[2] = "franklin"
+print(list[2])
+
+#deleting list
+
+list = ['physics','trevor','arthur']
+del list[2]
+print(list)
+
+
+#functions
+
+def greet():
+    print("hello")
+    print("i am shaam")
+greet()
+
+greet()
+
+def add(x, y):
+    c = x+y
+    print(c)
+add(4, 9)
+        
+def add(x, y):
+    c = x+y
+    return(c)
+result = add(4, 9)      
+print(result)
